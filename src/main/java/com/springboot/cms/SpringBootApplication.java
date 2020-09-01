@@ -1,7 +1,6 @@
 package com.springboot.cms;
 
 import org.springframework.boot.SpringApplication;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * SpringBoot启动类
@@ -9,7 +8,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @author YuanhuiHo
  */
 @org.springframework.boot.autoconfigure.SpringBootApplication
-public class SpringBootApplication  {
+public class SpringBootApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootApplication.class);

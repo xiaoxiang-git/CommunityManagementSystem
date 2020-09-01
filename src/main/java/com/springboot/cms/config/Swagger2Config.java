@@ -1,4 +1,5 @@
 package com.springboot.cms.config;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -11,8 +12,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * swagger配置类
- *@author xiaoxiang
  *
+ * @author xiaoxiang
  */
 @Configuration
 @EnableSwagger2

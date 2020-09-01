@@ -7,13 +7,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * 配置类
- *@author xiaoxiang
  *
+ * @author xiaoxiang
  */
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
-	@Override
-	public void addCorsMappings(CorsRegistry registry) {
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
 
 //		registry.addMapping("/**")
 //				.allowedOrigins("*")
@@ -22,6 +22,6 @@ public class WebConfig implements WebMvcConfigurer {
 //				.allowCredentials(true)
 //				.maxAge(3600);
 
-	}
+    }
 
 }

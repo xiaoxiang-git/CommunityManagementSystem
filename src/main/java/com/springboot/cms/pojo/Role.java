@@ -1,5 +1,7 @@
 package com.springboot.cms.pojo;
 
+import io.swagger.annotations.ApiParam;
+
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.Set;
@@ -11,10 +13,13 @@ import java.util.Set;
  */
 public class Role implements Serializable {
 
+    @ApiParam("角色id")
     private Integer id;
+    @ApiParam("角色名称")
     private String name;
 
     //关联用户
+    @ApiParam("关联用户")
     private Set<User> users;
 
     public Role() {

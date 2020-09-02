@@ -1,5 +1,7 @@
 package com.springboot.cms.pojo;
 
+import io.swagger.annotations.ApiParam;
+
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.Set;
@@ -11,18 +13,31 @@ import java.util.Set;
  */
 public class User implements Serializable {
 
+    @ApiParam("主键id")
     private Integer id;
+    @ApiParam("用户名")
     private String name;
+    @ApiParam("用户密码")
     private String password;
+    @ApiParam("身份id")
     private String identityId;
+    @ApiParam("单位名称id")
     private Integer companyNameId;
+    @ApiParam("角色id")
     private Integer roleNameId;
+    @ApiParam("审核状态-未审核/已审核")
     private String status;
+    @ApiParam("是否封号-0正常/1封号")
     private Integer isBan;
+    @ApiParam("性别")
     private String sex;
+    @ApiParam("电话号码")
     private String phone;
+    @ApiParam("邮箱")
     private String email;
+    @ApiParam("qq号")
     private String qq;
+    @ApiParam("用户头像")
     private String userPhoto;
 
     //关联角色

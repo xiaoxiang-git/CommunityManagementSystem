@@ -1,33 +1,26 @@
 package com.springboot.cms.util;
 
-import java.util.Date;
+import com.springboot.cms.constant.StatusCode;
+import com.springboot.cms.model.Message;
 
 /**
- * 返回消息的工具类
+ * 创建消息工具类
  *
  * @author xiaoxiang
  */
-
 public class MessageUtil {
     /**
-     * 成功，并且返回数据
+     * 成功
      */
-    public static <E> Message<E> success(E obj) {
-        return new Message<E>(200, "success", obj, new Date().getTime());
+    public static <T> Message<T> success(T object) {
+        return new Message<T>(StatusCode.NORMAL_CODE, "success", object);
     }
 
     /**
-     * 成功，但无返回数据
+     * 失败
      */
-    public static <E> Message<E> success() {
-        return new Message<E>(200, "success", null, new Date().getTime());
-    }
-
-    /**
-     * 失败,将自定义异常信息返回
-     */
-    public static <E> Message<E> error(Integer code, String msg) {
-        return new Message<E>(code, msg, null, new Date().getTime());
+    public static <T> Message<T> failure(T message) {
+        return new Message<T>(StatusCode.EXCEPTIONMESSAGE_CODE, "failure", message);
     }
 
 }

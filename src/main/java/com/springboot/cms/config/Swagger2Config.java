@@ -20,23 +20,21 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class Swagger2Config {
 
     @Bean
-    public Docket demoApi() {
+    public Docket docket() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.springboot.cms.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());
-
     }
-
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("社团系统")
-                .description("造作中...")
+                .title("社团管理系统")
+                .description("")
                 .termsOfServiceUrl("")
-                .version("1.1")
+                .version("1.0")
                 .build();
     }
 }

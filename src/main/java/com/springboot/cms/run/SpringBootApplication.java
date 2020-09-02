@@ -1,6 +1,8 @@
-package com.springboot.cms;
+package com.springboot.cms.run;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * SpringBoot启动类
@@ -8,6 +10,8 @@ import org.springframework.boot.SpringApplication;
  * @author YuanhuiHo
  */
 @org.springframework.boot.autoconfigure.SpringBootApplication
+@ComponentScan("com.springboot.cms")
+@MapperScan("com.springboot.cms.dao")
 public class SpringBootApplication {
 
     public static void main(String[] args) {

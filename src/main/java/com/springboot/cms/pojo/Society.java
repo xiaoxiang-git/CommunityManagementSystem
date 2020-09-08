@@ -15,7 +15,7 @@ public class Society implements Serializable {
     @ApiParam("主键id")
     private Integer id;
     @ApiParam("社团名称")
-    private String socieryName;
+    private String societyName;
     @ApiParam("创建时间")
     private String creationTime;
     @ApiParam("成立时间")
@@ -23,7 +23,7 @@ public class Society implements Serializable {
     @ApiParam("社团简介")
     private String introduction;
     @ApiParam("社团详细信息")
-    private String socieryDetails;
+    private String societyDetails;
     @ApiParam("社团照片")
     private String source;
     @ApiParam("社团状态-审核失败/审核通过/正在审核")
@@ -46,24 +46,6 @@ public class Society implements Serializable {
     public Society() {
     }
 
-    public Society(Integer id, String socieryName, String creationTime, String establishTime, String introduction, String socieryDetails, String source, String status, String music, String video, String societyNature, String founder, Integer societyPersonnelTotal, Double totalFunds, Double usedFunds) {
-        this.id = id;
-        this.socieryName = socieryName;
-        this.creationTime = creationTime;
-        this.establishTime = establishTime;
-        this.introduction = introduction;
-        this.socieryDetails = socieryDetails;
-        this.source = source;
-        this.status = status;
-        this.music = music;
-        this.video = video;
-        this.societyNature = societyNature;
-        this.founder = founder;
-        this.societyPersonnelTotal = societyPersonnelTotal;
-        this.totalFunds = totalFunds;
-        this.usedFunds = usedFunds;
-    }
-
     public Integer getId() {
         return id;
     }
@@ -72,12 +54,12 @@ public class Society implements Serializable {
         this.id = id;
     }
 
-    public String getSocieryName() {
-        return socieryName;
+    public String getSocietyName() {
+        return societyName;
     }
 
-    public void setSocieryName(String socieryName) {
-        this.socieryName = socieryName;
+    public void setSocietyName(String societyName) {
+        this.societyName = societyName;
     }
 
     public String getCreationTime() {
@@ -104,12 +86,12 @@ public class Society implements Serializable {
         this.introduction = introduction;
     }
 
-    public String getSocieryDetails() {
-        return socieryDetails;
+    public String getSocietyDetails() {
+        return societyDetails;
     }
 
-    public void setSocieryDetails(String socieryDetails) {
-        this.socieryDetails = socieryDetails;
+    public void setSocietyDetails(String societyDetails) {
+        this.societyDetails = societyDetails;
     }
 
     public String getSource() {
@@ -190,11 +172,11 @@ public class Society implements Serializable {
         if (o == null || getClass() != o.getClass()) return false;
         Society society = (Society) o;
         return Objects.equals(id, society.id) &&
-                Objects.equals(socieryName, society.socieryName) &&
+                Objects.equals(societyName, society.societyName) &&
                 Objects.equals(creationTime, society.creationTime) &&
                 Objects.equals(establishTime, society.establishTime) &&
                 Objects.equals(introduction, society.introduction) &&
-                Objects.equals(socieryDetails, society.socieryDetails) &&
+                Objects.equals(societyDetails, society.societyDetails) &&
                 Objects.equals(source, society.source) &&
                 Objects.equals(status, society.status) &&
                 Objects.equals(music, society.music) &&
@@ -209,18 +191,18 @@ public class Society implements Serializable {
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, socieryName, creationTime, establishTime, introduction, socieryDetails, source, status, music, video, societyNature, founder, societyPersonnelTotal, totalFunds, usedFunds);
+        return Objects.hash(id, societyName, creationTime, establishTime, introduction, societyDetails, source, status, music, video, societyNature, founder, societyPersonnelTotal, totalFunds, usedFunds);
     }
 
     @Override
     public String toString() {
         return "Society{" +
                 "id=" + id +
-                ", socieryName='" + socieryName + '\'' +
+                ", societyName='" + societyName + '\'' +
                 ", creationTime='" + creationTime + '\'' +
                 ", establishTime='" + establishTime + '\'' +
                 ", introduction='" + introduction + '\'' +
-                ", socieryDetails='" + socieryDetails + '\'' +
+                ", societyDetails='" + societyDetails + '\'' +
                 ", source='" + source + '\'' +
                 ", status='" + status + '\'' +
                 ", music='" + music + '\'' +

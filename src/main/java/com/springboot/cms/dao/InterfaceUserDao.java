@@ -32,7 +32,7 @@ public interface InterfaceUserDao {
 
     //根据条件查找用户
     @Select("SELECT id,name,password,identityId,companyNameId,roleNameId,status,isBan,sex,phone,email,qq,userPhoto FROM cms_users WHERE name=#{name}")
-    List<User> findByConditions(@Param("name") String... conditions);
+    List<User> findByConditions(@Param("name") String conditions);
 
     //查找所有用户
     @Select("SELECT id,name,password,identityId,companyNameId,roleNameId,status,isBan,sex,phone,email,qq,userPhoto FROM cms_users")

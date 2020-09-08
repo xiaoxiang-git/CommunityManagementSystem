@@ -32,7 +32,9 @@ public class UserController {
     @PostMapping("/login")
     @ApiOperation("登录功能")
     public Message<String> login(User user, HttpServletRequest httpServletRequest) {
+        System.out.println("user:"+user);
         List<User> users = interfaceCommonService.findByConditions(user.getName());
+        System.out.println("users:"+users);
         if (users.isEmpty()) {
             return MessageUtil.failure("用户名或密码错误");
         }

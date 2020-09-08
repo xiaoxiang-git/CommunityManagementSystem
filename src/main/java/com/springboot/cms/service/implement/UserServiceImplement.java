@@ -47,7 +47,7 @@ public class UserServiceImplement extends CommonServiceImplement<User> {
     //根据条件查找用户
     @Override
     public List<User> findByConditions(String... conditions) {
-        return interfaceUserDao.findByConditions(conditions);
+        return interfaceUserDao.findByConditions(conditions[0]);
     }
 
     //查找所有用户

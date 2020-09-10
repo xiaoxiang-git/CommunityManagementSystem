@@ -46,6 +46,24 @@ public class Society implements Serializable {
     public Society() {
     }
 
+    public Society(Integer id, String societyName, String creationTime, String establishTime, String introduction, String societyDetails, String source, String status, String music, String video, String societyNature, String founder, Integer societyPersonnelTotal, Double totalFunds, Double usedFunds) {
+        this.id = id;
+        this.societyName = societyName;
+        this.creationTime = creationTime;
+        this.establishTime = establishTime;
+        this.introduction = introduction;
+        this.societyDetails = societyDetails;
+        this.source = source;
+        this.status = status;
+        this.music = music;
+        this.video = video;
+        this.societyNature = societyNature;
+        this.founder = founder;
+        this.societyPersonnelTotal = societyPersonnelTotal;
+        this.totalFunds = totalFunds;
+        this.usedFunds = usedFunds;
+    }
+
     public Integer getId() {
         return id;
     }

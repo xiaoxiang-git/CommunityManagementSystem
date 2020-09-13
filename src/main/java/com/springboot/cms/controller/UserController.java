@@ -44,6 +44,11 @@ public class UserController {
     @PostMapping("/register")
     @ApiOperation("注册功能")
     public Message<String> register(User user) {
+        //*** 用户参数初始化-begin ***//
+        user.setRoleNameId(1);
+        user.setStatus("未审核");
+        user.setIsBan(0);
+        //*** 用户参数初始化-end ***//
         List<User> users = interfaceCommonService.findByConditions(user.getName());
         if (!users.isEmpty()) {
             return MessageUtil.failure("该用户名已存在");

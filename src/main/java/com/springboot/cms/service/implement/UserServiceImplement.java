@@ -28,9 +28,9 @@ public class UserServiceImplement extends CommonServiceImplement<User> {
     public void save(User user) {
         interfaceUserDao.save(user);
         //获取保存用户后主键id
-        user = (User) interfaceUserDao.findByConditions(user.getName());
+        List<User> users = interfaceUserDao.findByConditions(user.getName());
         //插入角色用户桥表
-        interfaceRoleUserDao.save(user);
+        interfaceRoleUserDao.save(users.get(0));
     }
 
     //更新用户

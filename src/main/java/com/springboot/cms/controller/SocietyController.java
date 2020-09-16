@@ -2,7 +2,6 @@ package com.springboot.cms.controller;
 
 import com.springboot.cms.model.Message;
 import com.springboot.cms.pojo.Society;
-import com.springboot.cms.service.InterfaceCommonService;
 import com.springboot.cms.service.implement.SocietyServiceImplement;
 import com.springboot.cms.util.MessageUtil;
 import io.swagger.annotations.Api;
@@ -22,7 +21,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/society")
-@Api(tags = "社团相关接口")
+@Api(tags = "社团相关处理器")
 public class SocietyController {
 
     @Resource(name = "societyServiceImplement")
@@ -57,16 +56,16 @@ public class SocietyController {
     }
 
     //查找所有社团
-    @GetMapping("/findAll")
+    @GetMapping("/findAllSociety")
     @ApiOperation("查找所有社团")
-    public Message<List<Society>> findAll() {
+    public Message<List<Society>> findAllSociety() {
         List<Society> societies = societyServiceImplement.findAll();
         return MessageUtil.success(societies);
     }
 
-    //根据社团id查找社团
+    //根据社团ID查找社团
     @GetMapping("/findSocietyById")
-    @ApiOperation("根据社团id查找社团")
+    @ApiOperation("根据社团ID查找社团")
     public Message<Society> findSocietyById(Integer id) {
         Society society = societyServiceImplement.findById(id);
         if (society == null) {

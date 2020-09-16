@@ -3,7 +3,10 @@ package com.springboot.cms.service.implement;
 import com.springboot.cms.dao.InterfaceSocietyDao;
 import com.springboot.cms.pojo.Society;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -13,6 +16,10 @@ import java.util.List;
  * @author XiaoXiang
  */
 @Service("societyServiceImplement")
+@Transactional(rollbackFor = Exception.class)
+//强迫该类事务使用CGLib代理方式而不使用JDK动态代理
+//因为该类注入Controller时必须使用此实现类而不能使用接口
+@Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class SocietyServiceImplement extends CommonServiceImplement<Society> {
 
     @Autowired
@@ -45,7 +52,7 @@ public class SocietyServiceImplement extends CommonServiceImplement<Society> {
         interfaceSocietyDao.delete(id);
     }
 
-    //根据社团id查找社团
+    //根据社团ID查找社团
     @Override
     public Society findById(Integer id) {
         return interfaceSocietyDao.findById(id);

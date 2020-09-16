@@ -30,7 +30,7 @@ public interface InterfaceSocietyDao {
     @Delete("DELETE FROM cms_societies WHERE id=#{id}")
     void delete(Integer id);
 
-    //根据社团id查询社团
+    //根据社团ID查询社团
     @Select("SELECT id,societyName,creationTime,establishTime,introduction,societyDetails,source,status,music,video,societyNature,founder,societyPersonnelTotal,totalFunds,usedFunds FROM cms_societies WHERE id=#{id}")
     Society findById(Integer id);
 
@@ -38,7 +38,7 @@ public interface InterfaceSocietyDao {
     @Select("SELECT id,societyName,creationTime,establishTime,introduction,societyDetails,source,status,music,video,societyNature,founder,societyPersonnelTotal,totalFunds,usedFunds FROM cms_societies WHERE societyName=#{societyName}")
     List<Society> findByName(String societyName);
 
-    //查询所有社团
+    //查找所有社团
     @Select("SELECT id,societyName,creationTime,establishTime,introduction,societyDetails,source,status,music,video,societyNature,founder,societyPersonnelTotal,totalFunds,usedFunds FROM cms_societies")
     List<Society> findAll();
 }

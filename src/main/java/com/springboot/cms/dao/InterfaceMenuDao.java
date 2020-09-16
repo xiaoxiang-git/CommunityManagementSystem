@@ -23,9 +23,9 @@ public interface InterfaceMenuDao {
     @Results({
             @Result(id = true, column = "id", property = "id"),
             @Result(column = "name", property = "name"),
-            @Result(column = "firstlevelmenu_id", property = "menus",
+            @Result(column = "id", property = "menus",
                     many = @Many(select = "com.springboot.cms.dao.InterfaceMenuDao.findAllSecondLevelMenu",
-                            fetchType = FetchType.LAZY))
+                            fetchType = FetchType.EAGER))
     })
     @Select("SELECT id,name FROM cms_firstlevelmenus")
     LinkedHashSet<Menu> findAllFirstLevelMenu();

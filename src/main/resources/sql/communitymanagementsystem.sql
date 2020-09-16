@@ -11,7 +11,7 @@
  Target Server Version : 50721
  File Encoding         : 65001
 
- Date: 15/09/2020 16:05:30
+ Date: 16/09/2020 12:44:48
 */
 
 SET NAMES utf8mb4;
@@ -40,6 +40,27 @@ INSERT INTO `cms_departments` VALUES (6, '组织部', NULL);
 INSERT INTO `cms_departments` VALUES (7, '传媒部', NULL);
 INSERT INTO `cms_departments` VALUES (8, '财务部', NULL);
 INSERT INTO `cms_departments` VALUES (9, '宣传部', NULL);
+
+-- ----------------------------
+-- Table structure for cms_firstlevelmenus
+-- ----------------------------
+DROP TABLE IF EXISTS `cms_firstlevelmenus`;
+CREATE TABLE `cms_firstlevelmenus`  (
+  `id` int(20) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '一级菜单名称',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of cms_firstlevelmenus
+-- ----------------------------
+INSERT INTO `cms_firstlevelmenus` VALUES (1, '学校管理');
+INSERT INTO `cms_firstlevelmenus` VALUES (2, '教师管理');
+INSERT INTO `cms_firstlevelmenus` VALUES (3, '学生会管理');
+INSERT INTO `cms_firstlevelmenus` VALUES (4, '团委管理');
+INSERT INTO `cms_firstlevelmenus` VALUES (5, '社联管理');
+INSERT INTO `cms_firstlevelmenus` VALUES (6, '社团管理');
+INSERT INTO `cms_firstlevelmenus` VALUES (7, '学生管理');
 
 -- ----------------------------
 -- Table structure for cms_organizations
@@ -5357,6 +5378,44 @@ INSERT INTO `cms_schools_2019` VALUES (2628, '4165014525', '新疆科技职业�
 INSERT INTO `cms_schools_2019` VALUES (2629, '4165014585', '吐鲁番职业技术学院', '65', '新疆维吾尔自治区', '6504', '吐鲁番市', '专科', '新疆维吾尔自治区', NULL);
 INSERT INTO `cms_schools_2019` VALUES (2630, '4165014622', '博尔塔拉职业技术学院', '65', '新疆维吾尔自治区', '6527', '博尔塔拉蒙古自治州', '专科', '新疆维吾尔自治区', NULL);
 INSERT INTO `cms_schools_2019` VALUES (2631, '4265051060', '新疆工业职业技术学院', '65', '新疆维吾尔自治区', '6501', '乌鲁木齐市', '专科', '新疆维吾尔自治区', NULL);
+
+-- ----------------------------
+-- Table structure for cms_secondlevelmenus
+-- ----------------------------
+DROP TABLE IF EXISTS `cms_secondlevelmenus`;
+CREATE TABLE `cms_secondlevelmenus`  (
+  `id` int(20) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '二级菜单名称',
+  `firstlevelmenu_id` int(20) NOT NULL COMMENT '一级菜单id',
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `firstlevelmenu_id`(`firstlevelmenu_id`) USING BTREE,
+  CONSTRAINT `firstlevelmenu_id` FOREIGN KEY (`firstlevelmenu_id`) REFERENCES `cms_firstlevelmenus` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of cms_secondlevelmenus
+-- ----------------------------
+INSERT INTO `cms_secondlevelmenus` VALUES (1, '新增学校', 1);
+INSERT INTO `cms_secondlevelmenus` VALUES (2, '修改学校', 1);
+INSERT INTO `cms_secondlevelmenus` VALUES (3, '删除学校', 1);
+INSERT INTO `cms_secondlevelmenus` VALUES (4, '新增教师', 2);
+INSERT INTO `cms_secondlevelmenus` VALUES (5, '修改教师', 2);
+INSERT INTO `cms_secondlevelmenus` VALUES (6, '删除教师', 2);
+INSERT INTO `cms_secondlevelmenus` VALUES (7, '添加成员', 3);
+INSERT INTO `cms_secondlevelmenus` VALUES (8, '修改成员', 3);
+INSERT INTO `cms_secondlevelmenus` VALUES (9, '删除成员', 3);
+INSERT INTO `cms_secondlevelmenus` VALUES (10, '添加成员', 4);
+INSERT INTO `cms_secondlevelmenus` VALUES (11, '修改成员', 4);
+INSERT INTO `cms_secondlevelmenus` VALUES (12, '删除成员', 4);
+INSERT INTO `cms_secondlevelmenus` VALUES (13, '添加成员', 5);
+INSERT INTO `cms_secondlevelmenus` VALUES (14, '修改成员', 5);
+INSERT INTO `cms_secondlevelmenus` VALUES (15, '删除成员', 5);
+INSERT INTO `cms_secondlevelmenus` VALUES (16, '新增社团', 6);
+INSERT INTO `cms_secondlevelmenus` VALUES (17, '修改社团', 6);
+INSERT INTO `cms_secondlevelmenus` VALUES (18, '删除社团', 6);
+INSERT INTO `cms_secondlevelmenus` VALUES (19, '新增学生', 7);
+INSERT INTO `cms_secondlevelmenus` VALUES (20, '修改学生', 7);
+INSERT INTO `cms_secondlevelmenus` VALUES (21, '删除学生', 7);
 
 -- ----------------------------
 -- Table structure for cms_societies

@@ -25,7 +25,7 @@ public class MenuServiceImplement extends CommonServiceImplement<Menu> {
     //查找所有菜单
     @Override
     public List<Menu> findAll() {
-        LinkedHashSet<Menu> linkedHashSet = interfaceMenuDao.findAll();
+        LinkedHashSet<Menu> linkedHashSet = interfaceMenuDao.findAllFirstLevelMenu();
         List<Menu> menus = new LinkedList<>();
         //LinkedHashSet转LinkedList
         menus.addAll(linkedHashSet);

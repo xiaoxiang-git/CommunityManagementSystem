@@ -24,14 +24,14 @@ public interface InterfaceMenuDao {
             @Result(id = true, column = "id", property = "id"),
             @Result(column = "name", property = "name"),
             @Result(column = "firstlevelmenu_id", property = "menus",
-                    many = @Many(select = "com.springboot.cms.dao.InterfaceMenuDao.findAll",
+                    many = @Many(select = "com.springboot.cms.dao.InterfaceMenuDao.findAllSecondLevelMenu",
                             fetchType = FetchType.LAZY))
     })
     @Select("SELECT id,name FROM cms_firstlevelmenus")
-    LinkedHashSet<Menu> findAll();
+    LinkedHashSet<Menu> findAllFirstLevelMenu();
 
     //查找所有二级菜单
     @Select("SELECT id,name,firstlevelmenu_id FROM cms_secondlevelmenus WHERE firstlevelmenu_id=#{firstLevelMenu_id}")
-    Set<Menu> findAll(Integer firstLevelMenu_id);
+    Set<Menu> findAllSecondLevelMenu(Integer firstLevelMenu_id);
 
 }

@@ -9,7 +9,6 @@ import org.apache.ibatis.mapping.FetchType;
 import org.springframework.stereotype.Repository;
 
 import java.util.LinkedHashSet;
-import java.util.Set;
 
 /**
  * 菜单持久层接口
@@ -32,6 +31,6 @@ public interface InterfaceMenuDao {
 
     //查找所有二级菜单
     @Select("SELECT id,name,firstlevelmenu_id FROM cms_secondlevelmenus WHERE firstlevelmenu_id=#{firstLevelMenu_id}")
-    Set<Menu> findAllSecondLevelMenu(Integer firstLevelMenu_id);
+    LinkedHashSet<Menu> findAllSecondLevelMenu(Integer firstLevelMenu_id);
 
 }

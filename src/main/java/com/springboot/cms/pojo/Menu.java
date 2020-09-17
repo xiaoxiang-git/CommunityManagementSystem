@@ -3,8 +3,8 @@ package com.springboot.cms.pojo;
 import io.swagger.annotations.ApiParam;
 
 import java.io.Serializable;
+import java.util.LinkedHashSet;
 import java.util.Objects;
-import java.util.Set;
 
 /**
  * 菜单实体类
@@ -24,12 +24,12 @@ public class Menu implements Serializable {
 
     @ApiParam("二级菜单集合")
     //关联二级菜单
-    private Set<Menu> menus;
+    private LinkedHashSet<Menu> menus;
 
     public Menu() {
     }
 
-    public Menu(Integer id, String name, Integer firstLevelMenu_id, Set<Menu> menus) {
+    public Menu(Integer id, String name, Integer firstLevelMenu_id, LinkedHashSet<Menu> menus) {
         this.id = id;
         this.name = name;
         this.firstLevelMenu_id = firstLevelMenu_id;
@@ -60,11 +60,11 @@ public class Menu implements Serializable {
         this.firstLevelMenu_id = firstLevelMenu_id;
     }
 
-    public Set<Menu> getMenus() {
+    public LinkedHashSet<Menu> getMenus() {
         return menus;
     }
 
-    public void setMenus(Set<Menu> menus) {
+    public void setMenus(LinkedHashSet<Menu> menus) {
         this.menus = menus;
     }
 

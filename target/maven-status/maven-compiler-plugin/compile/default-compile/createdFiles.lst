@@ -1,0 +1,17 @@
+com\springboot\cms\pojo\Role.class
+com\springboot\cms\pojo\User.class
+com\springboot\cms\util\MessageUtil.class
+com\springboot\cms\run\SpringBootApplication.class
+com\springboot\cms\service\implement\CommonServiceImplement.class
+com\springboot\cms\exception\CommunityManagementSystemException.class
+com\springboot\cms\model\Message.class
+com\springboot\cms\controller\UserController.class
+com\springboot\cms\dao\InterfaceSocietyDao.class
+com\springboot\cms\config\Swagger2Config.class
+com\springboot\cms\service\InterfaceCommonService.class
+com\springboot\cms\pojo\Society.class
+com\springboot\cms\constant\StatusCode.class
+com\springboot\cms\service\implement\SocietyServiceImplement.class
+com\springboot\cms\service\implement\UserServiceImplement.class
+com\springboot\cms\controller\SocietyController.class
+com\springboot\cms\dao\InterfaceUserDao.class

@@ -1,0 +1,17 @@
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\dao\InterfaceSocietyDao.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\pojo\Society.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\service\implement\CommonServiceImplement.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\util\MessageUtil.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\constant\StatusCode.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\exception\CommunityManagementSystemException.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\controller\UserController.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\run\SpringBootApplication.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\service\implement\SocietyServiceImplement.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\service\implement\UserServiceImplement.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\model\Message.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\config\Swagger2Config.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\dao\InterfaceUserDao.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\service\InterfaceCommonService.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\pojo\User.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\controller\SocietyController.java
+D:\ideaworkspack\CommunityManagementSystem\src\main\java\com\springboot\cms\pojo\Role.java

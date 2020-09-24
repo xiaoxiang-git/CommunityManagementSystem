@@ -16,7 +16,7 @@ import java.util.List;
  * @author XiaoXiang
  */
 @Service("societyServiceImplement")
-@Transactional(rollbackFor = Exception.class)
+@Transactional(rollbackFor = Exception.class)//加上rollbackFor=Exception.class,可以让事物在遇到非运行时异常时也回滚
 //强迫该类事务使用CGLib代理方式而不使用JDK动态代理
 //因为该类注入Controller时必须使用此实现类而不能使用接口
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
